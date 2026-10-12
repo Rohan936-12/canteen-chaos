@@ -95,3 +95,14 @@ Reproduction: Open the website at a mobile viewport width of approximately 375px
 Fix: Updated the mobile ".site-nav" CSS rules to constrain its width to the viewport and apply "box-sizing: border-box".
 
 Verification: Reopened the mobile menu at the tested viewport width and confirmed that it stays within the screen edges.
+
+
+CC-05 — The category bar scrolls away on my phone
+
+Reproduction: Open the menu on a small-screen/mobile viewport and scroll down through the dishes. The category bar scrolls out of view.
+
+Root cause: The ".cat-tabs" element used "position: relative", so it scrolled with the page instead of staying visible.
+
+Fix: Changed ".cat-tabs" to "position: sticky", set "top: 0", added a "z-index", and retained its horizontal scrolling behavior.
+
+Verification: Tested on a mobile viewport and confirmed that the category bar stays visible while scrolling through the dishes.
