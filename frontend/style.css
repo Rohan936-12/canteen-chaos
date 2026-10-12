@@ -1059,3 +1059,8 @@ body.is-offline .site-header { filter: grayscale(0.4); }
   .price-filter input { flex: 1; }
   .staff-controls { width: 100%; justify-content: space-between; }
 }
+/* CC-02: Keep dish names and prices readable in dark mode*/
+html [ data-theme="dark"] .dish-name,
+html [data-theme="dark"] .dish-price {
+  color: #ffffff !important;
+}

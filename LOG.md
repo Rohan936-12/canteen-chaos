@@ -68,3 +68,22 @@ stuck is not.
 Anything not on the bug log: a problem you found yourself, a test you
 wrote, or a fix you are unsure about. Same format, plus one line on how
 you noticed it.
+
+
+
+CC-02 — Dark mode text readability
+
+Bug: Dish names and prices were difficult to read in dark mode because the text appeared too dark against the dark background.
+
+Reproduction steps:
+
+1. Open the canteen menu.
+2. Switch the theme to dark mode.
+3. Observe the dish names and prices on the menu cards.
+
+Fix: Added a dark-theme CSS rule in "frontend/style.css" targeting ".dish-name" and ".dish-price", setting their text color to "#ffffff !important".
+
+Reason: The explicit text color improves contrast against the dark background.
+
+Verification: Tested the menu in dark mode and light mode.
+(Keep this statement only if you tested both themes.)
