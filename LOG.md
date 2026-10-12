@@ -86,4 +86,12 @@ Fix: Added a dark-theme CSS rule in "frontend/style.css" targeting ".dish-name" 
 Reason: The explicit text color improves contrast against the dark background.
 
 Verification: Tested the menu in dark mode and light mode.
-(Keep this statement only if you tested both themes.)
+
+
+CC-03 — Mobile menu extends beyond screen edges
+
+Reproduction: Open the website at a mobile viewport width of approximately 375px and open the navigation menu.
+
+Fix: Updated the mobile ".site-nav" CSS rules to constrain its width to the viewport and apply "box-sizing: border-box".
+
+Verification: Reopened the mobile menu at the tested viewport width and confirmed that it stays within the screen edges.
