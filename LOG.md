@@ -151,7 +151,7 @@ Fix: Added an expiry-date check in `applyCoupon()` before calculating the discou
 Testing: Verified that an expired coupon is rejected and does not receive a discount.
 
 
-### CC-04 — "[write the original complaint for CC-04]"
+### CC-04 — "The buttons dont work on my tablet"
 
 What I tried:
 I tested the reported behavior and tried to reproduce the issue using the website. I checked the relevant functionality and attempted to identify the cause.
@@ -162,7 +162,7 @@ I could not consistently reproduce the issue or confirm its root cause, so I cou
 What I would try next:
 I would investigate the related code further, test more edge cases, and use browser developer tools to identify the cause.
 
-### CC-06 — "[write the original complaint for CC-06]"
+### CC-06 — "I ordered more than i had"
 
 What I tried:
 I tested the reported behavior and checked whether the issue occurred during normal use. I attempted to reproduce it and inspect the relevant functionality.
@@ -173,7 +173,7 @@ I could not reproduce the reported issue during my testing, so I did not make un
 What I would try next:
 I would test additional scenarios and inspect the relevant code to determine whether the issue occurs under specific conditions.
 
-### CC-07 — "[write the original complaint for CC-07]"
+### CC-07 — "Cancelling makes it worse"
 
 What I tried:
 I investigated the reported behavior and tested the related functionality to understand the problem.
@@ -184,7 +184,7 @@ I could not establish a reliable fix for this issue.
 What I would try next:
 I would review the relevant code in more detail, reproduce the issue with different inputs, and test a targeted fix.
 
-### CC-09 — "[write the original complaint for CC-09]"
+### CC-09 — "The menu shows more dishes than it should"
 
 What I tried:
 I tested the reported behavior and checked the relevant functionality to see whether I could reproduce the bug.
