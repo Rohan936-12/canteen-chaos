@@ -106,3 +106,14 @@ Root cause: The ".cat-tabs" element used "position: relative", so it scrolled wi
 Fix: Changed ".cat-tabs" to "position: sticky", set "top: 0", added a "z-index", and retained its horizontal scrolling behavior.
 
 Verification: Tested on a mobile viewport and confirmed that the category bar stays visible while scrolling through the dishes.
+
+
+CC-10: Sorting by price is backwards
+
+Reproduction: Select “Price: low to high” and observe that expensive dishes appear first. Select “Price: high to low” and observe that cheaper dishes appear first.
+
+Root cause: The ascending and descending price comparators were reversed. The rating-descending comparator also sorted by price instead of rating.
+
+Fix: Corrected the price comparators and changed the rating-descending comparator to compare ratings.
+
+Verification: Tested both price sorting options and rating-descending sorting. All three worked correctly.
