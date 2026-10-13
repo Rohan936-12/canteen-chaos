@@ -86,6 +86,14 @@ function applyCoupon(code, lines, coupons, { slot = null, now = new Date() } = {
   const wanted = String(code).trim().toUpperCase();
   const coupon = coupons.find((c) => c.code.toUpperCase() === wanted);
   if (!coupon) return { valid: false, discount: 0, reason: 'Coupon not found' };
+  // CC-08: Reject expired coupons
+if (coupon.expiresAt && new Date(coupon.expiresAt) <= now) {
+    return {
+        valid: false,
+        discount: 0,
+        reason: 'This coupon has expired'
+    };
+}
 
   if (coupon.usesLeft <= 0) {
     return { valid: false, discount: 0, reason: 'This coupon is fully used' };
