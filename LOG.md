@@ -135,3 +135,15 @@ Updated the CSS in "frontend/style.css" to position the search container and inc
 
 Verification:
 Tested the search suggestions and confirmed that they appear above other elements and remain usable.
+
+
+
+### CC-08: An old coupon still works
+
+**Reproduction:** Apply the FRESHERS24 coupon, which has an expiry date in the past.
+
+**Root cause:** The coupon validation did not reject coupons whose expiry date had passed.
+
+Fix: Added an expiry-date check in `applyCoupon()` before calculating the discount. Expired coupons are rejected with an explanatory message.
+
+Testing: Verified that an expired coupon is rejected and does not receive a discount.
