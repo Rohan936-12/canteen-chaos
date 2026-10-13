@@ -117,3 +117,21 @@ Root cause: The ascending and descending price comparators were reversed. The ra
 Fix: Corrected the price comparators and changed the rating-descending comparator to compare ratings.
 
 Verification: Tested both price sorting options and rating-descending sorting. All three worked correctly.
+
+
+CC-01 — Search suggestions appear behind other elements
+
+Reproduction steps:
+
+1. Open the Canteen Chaos website.
+2. Enter a dish name in the search box.
+3. Observe the search suggestions dropdown when it appears near the filter bar and dish cards.
+
+Root cause:
+The search suggestions dropdown was appearing behind nearby page elements because its positioning and stacking order were not sufficient.
+
+Fix:
+Updated the CSS in "frontend/style.css" to position the search container and increase the stacking order of the suggestions dropdown. Also adjusted nearby container overflow so suggestions can remain visible.
+
+Verification:
+Tested the search suggestions and confirmed that they appear above other elements and remain usable.
